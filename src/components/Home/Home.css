@@ -1,0 +1,51 @@
+#home-main-container {
+  margin: 40px;
+  display: flex;
+  color: var(--primary-text-color);
+  scroll-margin-top: 20vh;
+}
+
+.home-left-content {
+  flex-grow: 1;
+  align-self: center;
+  margin-left: 56px;
+}
+
+.home-right-content {
+  flex-grow: 1;
+}
+
+.home-image {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.intro-name {
+  color: var(--secondary-text-color);
+  margin-left: 8px;
+}
+
+.intro-main {
+  display: inline-block;
+}
+
+.social-media-links {
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  font-size: 32px;
+  color: var(--secondary-text-color);
+}
+
+.download-button {
+  margin: 32px 0px;
+}
+
+@media (max-width: 786px) {
+  .home-right-content {
+    display: none;
+  }
+}

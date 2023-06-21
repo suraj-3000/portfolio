@@ -1,0 +1,40 @@
+.navbar {
+  overflow: hidden;
+  position: sticky !important;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: var(--primary-text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font: 17px;
+  transition: 0.5s all;
+  border: 1px solid var(--primary-background-color);
+}
+
+.navbar a:hover {
+  border: 1px solid var(--secondary-border-color);
+  color: var(--primary-text-color);
+}
+
+.navbar-header {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+}
+
+.navbar-links {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar-links div {
+  flex-grow: 1;
+}

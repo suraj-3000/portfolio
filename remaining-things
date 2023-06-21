@@ -1,0 +1,22 @@
+1. Select one and Change font family of the whole web page
+2. Alternate color for section should be very much similar
+    - Dark theme
+        Dark gray: #333333
+        Deep blue: #1A237E
+    - Light Theme:
+        Light gray: #F8F8F8
+        Pale blue: #E8F2FE
+2. NavBar
+    - Change Font Size
+    - Change Click/Hover Effect
+    - Add Skils Section
+3. Home Section
+    - Align the Image Properly (Add Linear gradient)
+    - Add links to Profiles
+4. Skills
+    - Align Logos for small screeens
+    - Add Hover Effect
+    - Add Links to offical docs
+5. Projects
+    - Change logos for each section
+    - Align the size for all cards

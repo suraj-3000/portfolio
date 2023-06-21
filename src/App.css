@@ -1,0 +1,13 @@
+.App {
+  background-color: rgb(14, 14, 14);
+}
+
+:root {
+  --primary-background-color: rgb(14, 14, 14);
+  --secondary-background-color: rgb(41, 41, 41);
+  --input-fields-background-color: rgb(31, 31, 31);
+  --primary-text-color: white;
+  --secondary-text-color: aqua;
+  --primary-border-color: rgb(133, 133, 133);
+  --secondary-border-color: #0ef;
+}
