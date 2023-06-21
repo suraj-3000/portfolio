@@ -1,5 +1,4 @@
 import React from "react";
-import homeImage from "../../assets/img/home.jpg";
 import "./Skills.css";
 import SplunkLogo from "../../assets/img/splunk-logo.svg";
 import QRadarLogo from "../../assets/img/ibm-qradar-logo.png";
@@ -19,37 +18,41 @@ function Skills() {
         </p>
       </div>
       <div className="skills-container">
-        <a href="https://www.splunk.com/" target="_blank">
+        <a href="https://www.splunk.com/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
             <img src={SplunkLogo} className="skills-image" />
           </div>
         </a>
 
-        <a href="https://www.ibm.com/products/qradar-siem" target="_blank">
+        <a
+          href="https://www.ibm.com/products/qradar-siem"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="skills-container-item">
             <img src={QRadarLogo} className="skills-image" />
           </div>
         </a>
 
-        <a href="https://react.dev/" target="_blank">
+        <a href="https://react.dev/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
             <img src={ReactLogo} className="skills-image" />
           </div>
         </a>
 
-        <a href="https://restfulapi.net/" target="_blank">
+        <a href="https://restfulapi.net/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
             <img src={RestAPILogo} className="skills-image" />
           </div>
         </a>
 
-        <a href="https://www.python.org/" target="_blank">
+        <a href="https://www.python.org/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
             <img src={PythonLogo} className="skills-image" />
           </div>
         </a>
 
-        <a href="https://www.docker.com/" target="_blank">
+        <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
             <img src={DockerLogo} className="skills-image" />
           </div>
