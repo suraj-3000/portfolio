@@ -20,7 +20,7 @@ function Skills() {
       <div className="skills-container">
         <a href="https://www.splunk.com/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
-            <img src={SplunkLogo} className="skills-image" />
+            <img src={SplunkLogo} className="skills-image" alt="" />
           </div>
         </a>
 
@@ -30,31 +30,31 @@ function Skills() {
           rel="noreferrer"
         >
           <div className="skills-container-item">
-            <img src={QRadarLogo} className="skills-image" />
+            <img src={QRadarLogo} className="skills-image" alt="" />
           </div>
         </a>
 
         <a href="https://react.dev/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
-            <img src={ReactLogo} className="skills-image" />
+            <img src={ReactLogo} className="skills-image" alt="" />
           </div>
         </a>
 
         <a href="https://restfulapi.net/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
-            <img src={RestAPILogo} className="skills-image" />
+            <img src={RestAPILogo} className="skills-image" alt="" />
           </div>
         </a>
 
         <a href="https://www.python.org/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
-            <img src={PythonLogo} className="skills-image" />
+            <img src={PythonLogo} className="skills-image" alt="" />
           </div>
         </a>
 
         <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
           <div className="skills-container-item">
-            <img src={DockerLogo} className="skills-image" />
+            <img src={DockerLogo} className="skills-image" alt="" />
           </div>
         </a>
       </div>
