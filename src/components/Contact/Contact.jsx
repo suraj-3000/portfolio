@@ -93,7 +93,8 @@ function Contact() {
         <div>
           <h1>Reach out to me!</h1>
         </div>
-        <form method="post" name="Contact Form">
+        <form method="post" name="Contact Form" netlify>
+          <input type="hidden" name="form-name" value="contact" />
           <p>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" />
