@@ -88,32 +88,47 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div id="contact-section">
-      <div id="contact-main-content" className="contact-form">
-        <div>
-          <h1>Reach out to me!</h1>
-        </div>
-        <form method="post" name="contact" netlify data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" />
-          </p>
-          <p>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" />
-          </p>
-          <p>
-            <label for="comments">Comments:</label>
-            <br />
-            <textarea name="comments" id="comments"></textarea>
-          </p>
-          <p>
-            <input type="submit" />
-          </p>
-        </form>
-      </div>
-    </div>
+    // <div id="contact-section">
+    //   <div id="contact-main-content" className="contact-form">
+    //     <div>
+    //       <h1>Reach out to me!</h1>
+    //     </div>
+    //     <form method="post" name="contact" netlify data-netlify="true">
+    //       <input type="hidden" name="contact" />
+    //       <p>
+    //         <label for="name">Name:</label>
+    //         <input type="text" name="name" id="name" />
+    //       </p>
+    //       <p>
+    //         <label for="email">Email:</label>
+    //         <input type="email" name="email" id="email" />
+    //       </p>
+    //       <p>
+    //         <label for="comments">Comments:</label>
+    //         <br />
+    //         <textarea name="comments" id="comments"></textarea>
+    //       </p>
+    //       <p>
+    //         <input type="submit" />
+    //       </p>
+    //     </form>
+    //   </div>
+    // </div>
+    <form name="contact" netlify>
+      <p>
+        <label>
+          Name <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Email <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   );
 }
 
