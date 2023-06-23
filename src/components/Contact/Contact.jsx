@@ -11,6 +11,9 @@ function Contact() {
 
   const sendMessage = async () => {
     try {
+      const success_message = document.querySelector(".success-message");
+      success_message.classList.remove("display-success-message");
+
       const data = {
         _type: "users",
         name: name,
@@ -20,7 +23,6 @@ function Contact() {
 
       const response = await client.create(data);
       console.log("Data sent to Sanity:", response);
-      const success_message = document.querySelector(".success-message");
       success_message.classList.add("display-success-message");
       setName("");
       setEmail("");
@@ -47,6 +49,7 @@ function Contact() {
               placeholder="Enter Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
 
@@ -57,6 +60,7 @@ function Contact() {
               placeholder="Enter Your EMail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
 
@@ -67,6 +71,7 @@ function Contact() {
               rows={7}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </div>
 
