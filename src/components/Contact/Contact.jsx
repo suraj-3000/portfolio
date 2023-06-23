@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Utils/Button/Button";
-import axios from "axios";
 import client from "../../sanity";
 
 function Contact() {
@@ -36,25 +35,7 @@ function Contact() {
     }
   };
 
-  const sendDataToSanity = async () => {
-    try {
-      const data = {
-        _type: "users",
-        // Include other fields as defined in your document schema
-        name: name,
-        email: email,
-        message: message,
-      };
-
-      const response = await client.create(data);
-      console.log("Data sent to Sanity:", response);
-    } catch (error) {
-      console.error("Error sending data to Sanity:", error);
-    }
-  };
-
   fetchData();
-  // sendDataToSanity();
 
   return (
     <div id="contact-section">
