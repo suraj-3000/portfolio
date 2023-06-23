@@ -41,7 +41,7 @@ function Contact() {
         <div className="success-message">
           <h6>Your details are submitted successfully!!</h6>
         </div>
-        <div>
+        <form onSubmit={sendMessage}>
           <div className="contact-form-item contact-name">
             <label>Your Name</label>
             <input
@@ -76,13 +76,13 @@ function Contact() {
           </div>
 
           <Button
+            type="submit"
             title="Submit"
             iconName={faPaperPlane}
             buttonClass="submit-button"
             iconClass="submit-icon"
-            onClick={sendMessage}
           />
-        </div>
+        </form>
       </div>
     </div>
   );
