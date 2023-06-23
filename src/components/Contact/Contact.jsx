@@ -13,7 +13,6 @@ function Contact() {
     try {
       const data = {
         _type: "users",
-        // Include other fields as defined in your document schema
         name: name,
         email: email,
         message: message,
@@ -21,27 +20,24 @@ function Contact() {
 
       const response = await client.create(data);
       console.log("Data sent to Sanity:", response);
+      const success_message = document.querySelector(".success-message");
+      success_message.classList.add("display-success-message");
+      setName("");
+      setEmail("");
+      setMessage("");
     } catch (error) {
       console.error("Error sending data to Sanity:", error);
     }
   };
 
-  const fetchData = async () => {
-    try {
-      const users = await client.fetch('*[_type == "users"]');
-      console.log(users);
-    } catch (error) {
-      console.error("Error fetching Sanity document:", error);
-    }
-  };
-
-  fetchData();
-
   return (
     <div id="contact-section">
       <div id="contact-main-content" className="contact-form">
-        <div>
+        <div className="form-heading">
           <h1>Reach out to me!</h1>
+        </div>
+        <div className="success-message">
+          <h6>Your details are submitted successfully!!</h6>
         </div>
         <div>
           <div className="contact-form-item contact-name">

@@ -48,3 +48,16 @@ textarea {
   padding: 16px 20px;
   box-sizing: border-box;
 }
+
+.success-message {
+  color: var(--secondary-text-color);
+  display: none;
+}
+
+.display-success-message {
+  display: block;
+}
+
+.form-heading {
+  text-align: center;
+}
