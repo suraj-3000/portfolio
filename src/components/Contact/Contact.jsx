@@ -8,8 +8,12 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendMessage = async () => {
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
     try {
       const success_message = document.querySelector(".success-message");
       success_message.classList.remove("display-success-message");
@@ -27,8 +31,10 @@ function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setIsSubmitting(false);
     } catch (error) {
       console.error("Error sending data to Sanity:", error);
+      setIsSubmitting(false);
     }
   };
 
@@ -76,11 +82,11 @@ function Contact() {
           </div>
 
           <Button
-            type="submit"
             title="Submit"
             iconName={faPaperPlane}
             buttonClass="submit-button"
             iconClass="submit-icon"
+            disabled={isSubmitting}
           />
         </form>
       </div>
