@@ -10,26 +10,21 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendMessage = () => {
-    const data = {
-      name,
-      email,
-      message,
-    };
-    console.log("test");
+  const sendMessage = async () => {
+    try {
+      const data = {
+        _type: "users",
+        // Include other fields as defined in your document schema
+        name: name,
+        email: email,
+        message: message,
+      };
 
-    axios
-      .post("http://localhost:3001/api/send-message", data)
-      .then((response) => {
-        console.log("Message sent successfully", response);
-        // Reset form fields after successful submission
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => {
-        console.error("Error sending message:", error);
-      });
+      const response = await client.create(data);
+      console.log("Data sent to Sanity:", response);
+    } catch (error) {
+      console.error("Error sending data to Sanity:", error);
+    }
   };
 
   const fetchData = async () => {
@@ -41,7 +36,25 @@ function Contact() {
     }
   };
 
+  const sendDataToSanity = async () => {
+    try {
+      const data = {
+        _type: "users",
+        // Include other fields as defined in your document schema
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      const response = await client.create(data);
+      console.log("Data sent to Sanity:", response);
+    } catch (error) {
+      console.error("Error sending data to Sanity:", error);
+    }
+  };
+
   fetchData();
+  // sendDataToSanity();
 
   return (
     <div id="contact-section">
